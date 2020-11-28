@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>world Population with Wasabi Artist</title>
+    <link href="style/styleWorldPop.css" rel="stylesheet">
+    <style></style>
+</head>
+
+<body>
+<div id="chart"></div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<!--script src="https://d3js.org/d3.v3.min.js"></script-->
+<script src="scripts/afficheJson.js"></script>
+
+<!--script type="text/javascript">
+    window.onload = function(){
+        
+    $.get("data/wasartist.json", function(data){        
+        console.log(data);
+        
+        // suppression des champs jugés "inutiles"
+        for (i in data) {
+            data[i].members = "";
+            data[i].rdf = "";
+            data[i].abstract = "";
+            data[i].dbp_abstract = "";
+        }
+        
+        var tmp = JSON.stringify(data);
+//        data = JSON.parse(tmp);
+//        console.log(" longeur totale : "+tmp.length);
+        
+//        var j=0,
+//            i=0;
+//        do {
+//            i = tmp.indexOf('"[]"',i+1);      
+//            j++;
+//        } while(i>0);
+//        console.log(j+" : "+'"[]"');            // 295713 *2
+//        j=0;
+//        
+//        do {
+//            i = tmp.indexOf('"[\\"',i+1);
+//            j++;
+//        } while(i>0);
+//        console.log(j+" : "+'"[\\"');           // 245987 *2
+//        j=0;
+//        
+//        do {
+//            i = tmp.indexOf('\\"]"',i+1);     
+//            j++;
+//        } while(i>0);
+//        console.log(j+" : "+'\\"]"');           // 245987 *2
+//        j=0;
+//        
+//        do {
+//            i = tmp.indexOf('\\",\\"',i+1);   
+//            j++;
+//        } while(i>0);
+//        console.log(j+" : "+'\\",\\"');         // 675895 *2
+//        j=0;
+        
+        // transfomation des string en tableau
+        var tmp = tmp.replaceAll('"[]"','[]')
+                .replaceAll('"[\\"','["')
+                .replaceAll('\\"]"','"]')
+                .replaceAll('\\",\\"','","');
+        
+        data = JSON.parse(tmp);
+        console.log(data);
+        
+        // tmp.replaceAll('"[\"','["'); console.log(tmp);
+        // tmp.replaceAll('\"]"','"]'); console.log(tmp);
+        // tmp.replaceAll('\",\"','","'); console.log(tmp);
+        });
+    }
+</script-->
+
+</body>
+</html>
